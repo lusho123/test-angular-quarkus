@@ -1,0 +1,89 @@
+<!-- <nb-card>
+    <nb-card-header>
+        <div class="header-btn">
+            <span class="mr9">Editar Usuario</span>
+            <h5>
+                Editar Usuario
+            </h5>
+            <button nbButton status="danger" (click)="delete(editUser.id)"><i class="fas fa-trash"></i></button>
+        </div>
+    </nb-card-header>
+
+    <nb-card-body>
+        <form  (ngSubmit)="edit()">
+            <div class="mb4">
+                <label for="user"><strong>Usuario</strong></label>
+                <input type="text" nbInput fullWidth formControlName="user" placeholder="Usuario">
+                <input type="text" nbInput fullWidth placeholder="Usuario">
+                <input #name nbInput placeholder="Name">
+                <input #name nbInput placeholder="Name">
+            </div>
+            <div class="mb4">
+                <label for="name" class="mb3"><strong>Nombre</strong></label>
+                <input type="text" nbInput fullWidth formControlName="name" placeholder="Nombre">
+            </div>
+            <div class="mb4">
+                <label for="firstLastName"><strong>Apellido Paterno</strong></label>
+                <input type="text" nbInput fullWidth formControlName="firstLastName" placeholder="Apellido">
+            </div>
+            <div class="mb4">
+                <label for="secondLastName"><strong>Apellido Mateno</strong></label>
+                <input type="text" nbInput fullWidth formControlName="secondLastName" placeholder="Apellido">
+            </div>
+            <div class="mb4">
+                <label for="age"><strong>Telefono</strong></label>
+                <input type="text" nbInput fullWidth formControlName="phone" placeholder="Telefono">
+            </div>
+            <div class="mb4">
+                <label for="email"><strong>Email</strong></label>
+                <input type="text" nbInput fullWidth formControlName="email" placeholder="Email">
+            </div>
+            <hr>
+            <div class="mt5 header-btn">
+                <button nbButton status="danger" (click)="close()">Cancelar</button>
+                <button nbButton status="success" class="btn">Aceptar</button>
+            </div>
+        </form>
+    </nb-card-body>
+
+</nb-card> -->
+<!-- <div class="modal"> -->
+    <form [formGroup]="userForm" style="width: 500px;" (ngSubmit)="edit()">
+        <nb-card>
+            <nb-card-header>
+                <div class="d-flex justify-content-between">
+                    <h4>
+                        Editar Usuario
+                    </h4>
+                    <button type="button" nbButton status="danger" (click)="delete(editUser.id)"><i class="fas fa-trash"></i></button>
+                </div>
+            </nb-card-header>
+            <nb-card-body>
+                <div class="row">
+                    <input type="text" nbInput fullWidth formControlName="name" placeholder="Nombre">
+                </div>
+                <div class="row">
+                    <input type="text" nbInput fullWidth formControlName="firstLastName" placeholder="Apellido Paterno">
+                </div>
+                <div class="row">
+                    <input type="text" nbInput fullWidth formControlName="secondLastName" placeholder="Apellido Materno">
+                </div>
+                <div class="row">
+                    <input type="text" nbInput fullWidth formControlName="user" placeholder="Usuario">
+                </div>
+                <div class="row">
+                    <input type="text" nbInput fullWidth formControlName="phone" placeholder="Teléfono">
+                </div>
+                <div class="row">
+                    <input type="text" nbInput fullWidth formControlName="email" placeholder="Correo">
+                </div>
+            </nb-card-body>
+            <nb-card-footer>
+                <div class="d-flex justify-content-around">
+                    <button type="button" class="cancel" nbButton status="danger" (click)="cancel()">Cancelar</button>
+                    <button type="submit" nbButton status="success">Editar</button>
+                </div>
+            </nb-card-footer>
+        </nb-card>
+    </form>
+<!-- </div> -->

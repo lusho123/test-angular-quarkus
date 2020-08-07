@@ -1,0 +1,83 @@
+<form [formGroup]="userForm" (ngSubmit)="createUser()">
+    <nb-card>
+        <nb-card-header>
+            <h4>
+                Agregar usuario
+            </h4>
+        </nb-card-header>
+        <nb-card-body class="items">
+            <div class="row">
+                <div class="col-sm-12">
+                    <label for="name" class="label" [ngClass]="{'danger': statusName.flag}"><strong>Nombre(s) *</strong></label>
+                    <input type="text" id="name" formControlName="name" placeholder="Nombre" 
+                            nbInput fullWidth status="{{statusName.label}}" />
+                    <span [ngClass]="{'danger': statusName.flag, 'basic': !statusName.flag}">
+                        El campo es requerido.
+                    </span>
+                </div>  
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <label for="lastName" class="label" [ngClass]="{'danger': statuslastName.flag}"><strong>Apellido Paterno *</strong></label>
+                    <input type="text" nbInput fullWidth id="lastName" formControlName="firstLastName"
+                        placeholder="Apellido Parterno" status="{{statuslastName.label}}"/>
+                    <span [ngClass]="{'danger': statuslastName.flag, 'basic': !statuslastName.flag}">
+                        El campo es requerido.
+                    </span>
+                </div>
+                <div class="col-md-6">
+                    <label for="lastName" class="label"><strong>Apellido Materno</strong></label>
+                    <input type="text" nbInput fullWidth formControlName="secondLastName"
+                        placeholder="Apellido Materno" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <label for="user" class="label" [ngClass]="{'danger': statusUser.flag}"><strong>Usuario *</strong></label>
+                    <input type="text" nbInput fullWidth formControlName="user" placeholder="Usuario" status="{{statusUser.label}}" />
+                    <span [ngClass]="{'danger': statusUser.flag, 'basic': !statusUser.flag}">
+                        El campo es requerido.
+                    </span>
+                </div>
+                <div class="col-md-6">
+                    <label for="email" class="label" [ngClass]="{'danger': statusEmail.flag}"><strong>Email *</strong></label>
+                    <input type="text" nbInput fullWidth formControlName="email" placeholder="Email" status="{{statusEmail.label}}"/>
+                    <span [ngClass]="{'danger': statusEmail.flag, 'basic': !statusEmail.flag}">
+                        Correo electronico no valido.
+                    </span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <label for="profile" class="label" [ngClass]="{'danger': statusProfile.flag}"><strong>Perfil *</strong></label>
+                    <nb-select fullWidth formControlName="profile" placeholder="Perfil" [(selected)]="selected" status="{{statusProfile.label}}">
+                        <nb-option *ngFor="let profile of profiles" value="{{ profile.id }}">
+                            {{ profile.name }}
+                        </nb-option>
+                    </nb-select>
+                    <span [ngClass]="{'danger': statusProfile.flag, 'basic': !statusProfile.flag}">
+                        El campo es requerido.
+                    </span>
+                </div>
+                <div class="col-md-6">
+                    <label for="phone" class="label" [ngClass]="{'danger': statusPhone.flag}"><strong>Telefono *</strong></label>
+                    <input type="text" nbInput fullWidth formControlName="phone" placeholder="Telefono" status="{{statusPhone.label}}"/>
+                    <span [ngClass]="{'danger': statusPhone.flag, 'basic': !statusPhone.flag}">
+                        El mínimo de dígitos es 10.
+                    </span>
+                </div>
+            </div>
+            <!-- <div class="row">
+                <div class="col-md-12">
+                    <label for="password" class="label"><strong>Contraseña *</strong></label>
+                    <input type="password" nbInput fullWidth formControlName="password" placeholder="Contraseña" />
+                </div>
+            </div> -->
+        </nb-card-body>
+        <nb-card-footer>
+            <div class="btn-center">
+                <button nbButton status="primary" class="btn">Crear</button>
+            </div>
+        </nb-card-footer>
+    </nb-card>
+</form>

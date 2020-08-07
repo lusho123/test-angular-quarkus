@@ -1,0 +1,49 @@
+<!-- ----------------------------------------------------------------------- -->
+<!--                             List of clients                             -->
+<!-- ----------------------------------------------------------------------- -->
+<nb-card>
+    <nb-card-header>
+      Lista de Usuarios
+    </nb-card-header>
+  
+    <nb-card-body>
+      <ng2-smart-table [settings]="settings" [source]="source" (custom)="openModal($event)" (deleteConfirm)="onDeleteConfirm($event)">
+      </ng2-smart-table>
+    </nb-card-body>
+  </nb-card>
+
+
+<!-- <nb-card>
+    <nb-card-header>
+        <h4>
+            Lista usuarios
+        </h4>
+        <button (click)="getUsers()">Recargar</button>
+    </nb-card-header>
+    <nb-card-body class="example-items-rows">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Usuario</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Perfil</th>
+                    <th>Correo</th>
+                    <th>Telefono</th>
+                </tr>
+            </thead>
+            <tr *ngFor="let user of users" (click)="open(dialog, user.id)" class="btr">
+            <tr *ngFor="let user of users" (click)="openModal(user.id)" class="btr">
+                <td>{{user.id}}</td>
+                <td>{{user.user}}</td>
+                <td>{{user.name}}</td>
+                <td>{{user.firstLastName}} {{user.secondLastName}}</td>
+                <td>{{user.profile.name}}</td>
+                <td>{{user.email}}</td>
+                <td>{{user.phone}}</td>
+            </tr>
+        </table>
+
+    </nb-card-body>
+</nb-card> -->

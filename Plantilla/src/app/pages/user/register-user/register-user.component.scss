@@ -1,0 +1,108 @@
+@import "../../../@theme/styles/themes";
+
+// .header-btn {
+//     display: grid;
+//     grid-column-gap: 60px;
+//     grid-template-columns: auto auto ;
+//     // background-color: #2196F3;
+//     // padding: 0px;
+// }
+
+// .btn  {
+//     // width: 280px;
+//     padding: 0 10px 0 10px;
+// }
+
+// .col-1 {
+//     margin-bottom: 20px;
+// }
+
+// .col-2 {
+//     display: grid;
+//     grid-column-gap: 2%;
+//     grid-row-gap: 2%;
+//     grid-template-columns: 50% 50% ;
+//     margin-bottom: 20px;
+// }
+
+// .col-3 {
+//     display: grid;
+//     grid-column-gap: 25x;
+//     grid-template-columns: auto auto auto;
+// }
+
+// .item-grid {
+//     width: 100%;
+// }
+
+// label {
+//     margin-bottom: 10px;
+// }
+
+// .btn-center {
+//     // width: 200px;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     margin-top: 25px;
+// }
+
+// .btn {
+//     width: 300px;
+// }
+
+@include nb-install-component() {
+  .show-grid {
+    .row {
+      margin: -0.5rem;
+    }
+
+    div[class^="col-"] {
+      padding: 0.5rem;
+      box-sizing: border-box;
+
+      div {
+        text-align: center;
+        background-color: nb-theme(background-basic-color-2);
+        padding: 0.75rem 0.25rem;
+        border-radius: 0.25rem;
+      }
+    }
+  }
+
+  .row {
+    margin-bottom: 1rem;
+  }
+
+  .grid-h {
+    margin-top: 1.5rem;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  .table-responsive {
+    margin-top: 1rem;
+  }
+
+  .btn-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .btn {
+    width: 300px;
+  }
+
+  .danger {
+    color: red;
+    display: block;
+  }
+
+  .basic {
+    display: none;
+  }
+
+}
